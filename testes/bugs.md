@@ -45,3 +45,43 @@ A aplicação informa que faltam R$ 0,00 para o frete grátis, porém o frete co
 ### Evidência
 
 [Evidência: CT08 - Frete grátis no limite de R$ 200,00](evidencias/CT08-frete-gratis-limite-200.png)
+
+---
+
+## BUG-002 - Desalinhamento vertical do contador do carrinho
+
+**Status:** Aberto
+
+**Severidade:** Crítica
+
+**Prioridade:** Alta
+
+### Descrição
+
+O número exibido no contador do carrinho apresenta desalinhamento vertical dentro do círculo verde, ficando posicionado mais próximo da parte superior do indicador em vez de estar centralizado.
+
+### Pré-condições
+
+- Acessar a Verzel Store.
+
+- Visualizar o contador do carrinho no cabeçalho da aplicação
+
+### Passos para reprodução
+
+1. Acessar a página inicial da loja.
+
+2. Observar o contador numérico dentro do círculo verde ao lado de “Carrinho”.
+
+3. Verificar o posicionamento vertical do número em relação ao círculo.
+
+### Resultado esperado
+
+O número deve estar centralizado vertical e horizontalmente dentro do círculo verde.
+
+### Resultado obtido
+
+O número 0 aparece deslocado para cima dentro do círculo verde, causando uma inconsistência visual no componente.
+
+### Evidência
+
+[BUG-002: Desalinhamento vertical do contador do carrinho](evidencias/BUG-002-contador-carrinho-desalinhado.png)

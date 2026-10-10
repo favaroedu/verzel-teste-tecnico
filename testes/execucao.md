@@ -928,3 +928,66 @@ A API retornou:
 ### Evidência
 
 [Evidência: CT26 - Listagem de produtos pela API](evidencias/CT26-listagem-produtos-api.png)
+
+---
+
+## CT27 - Responsividade do layout em resolução desktop
+
+**Data de execução:** 10/10/2026 
+
+**Status:** PASS ✅
+
+### Dados utilizados
+
+- Resolução: 1440 × 900 pixels
+- Dispositivo: Desktop
+- Navegador: Google Chrome
+- Elementos avaliados: Cabeçalho, seção principal, cards de produtos e rodapé.
+
+### Resultado esperado
+
+- O cabeçalho deve permanecer legível e organizado.
+- A seção principal deve ser exibida corretamente.
+- Os cards de produtos devem estar alinhados, sem sobreposição.
+- O rodapé deve permanecer legível e dentro dos limites da página.
+- Não deve existir rolagem horizontal indevida.
+
+### Resultado obtido
+
+Todos os elementos da aplicação foram exibidos corretamente na resolução testada. O cabeçalho, a seção principal, os cards de produtos e o rodapé permaneceram organizados e legíveis, sem sobreposição ou rolagem horizontal indevida.
+
+### Evidência
+
+[Evidência: CT27 - Responsividade Desktop](evidencias/CT27-responsividade-desktop.png)
+
+---
+
+## CT28 - Responsividade do layout em dispositivo móvel**
+
+**Data de execução:** 10/10/2026
+
+**Status:** PASS ✅
+
+### Dados utilizados
+
+- Dispositivo: Xiaomi Mi 9T
+- Resolução: 392 × 712 pixels
+- Navegador: Google Chrome para Android
+- Orientação: Retrato
+- Elementos avaliados: Cabeçalho, seção principal, cards de produtos, botões e rodapé.
+
+### Resultado esperado
+
+- Os elementos da aplicação devem ser exibidos corretamente na tela do dispositivo móvel.
+- Os textos devem permanecer legíveis.
+- Os cards de produtos devem estar organizados, sem sobreposição.
+- Os botões e demais elementos interativos devem permanecer acessíveis.
+- Não deve existir rolagem horizontal indevida.
+
+### Resultado obtido
+
+Todos os elementos da aplicação foram exibidos corretamente no dispositivo móvel. O cabeçalho, a seção principal, os cards de produtos, os botões e o rodapé permaneceram organizados e acessíveis, sem sobreposição ou problemas de navegação identificados.
+
+### Evidência
+
+[Evidência: CT28 - Responsividade Mobile](evidencias/CT28-responsividade-mobile.png)

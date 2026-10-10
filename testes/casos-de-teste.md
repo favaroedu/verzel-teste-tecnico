@@ -1268,3 +1268,111 @@ Validar a listagem de produtos disponíveis por meio da API, verificando o retor
 - A resposta deve conter a lista de produtos disponíveis.
 - Cada produto deve apresentar identificador, nome e preço.
 
+---
+
+## CT27 - Responsividade do layout em resolução desktop
+
+```gherkin
+Funcionalidade: Responsividade da loja
+
+  @CT27
+  Cenário: Adaptar os elementos da página
+
+  Dado que o cliente acessa a Verzel Store
+  Quando visualiza a aplicação no navegador
+  Então o cabeçalho deve permanecer legível e organizado
+  E a seção principal deve se adaptar à largura disponível
+  E os cards de produtos devem se reorganizar sem sobreposição
+  E o rodapé deve permanecer legível e dentro dos limites da página
+  E não deve existir rolagem horizontal indevida
+```
+
+### Informações do cenário
+
+**ID:** CT27
+
+**Objetivo:**  
+Validar a adaptação dos elementos da interface, verificando a organização, legibilidade e disposição do conteúdo.
+
+**Prioridade:** Média
+
+**Tipo:** Responsividade / Teste visual
+
+**Técnica:** Teste exploratório
+
+### Dados de teste
+
+| Campo | Valor |
+|---|---|
+| Resolução da tela | 1440 × 900 pixels |
+| Dispositivo | Desktop |
+| Navegador | Google Chrome |
+| Elementos validados | Cabeçalho, seção principal, cards de produtos e rodapé |
+
+
+### Regras de negócio validadas
+
+- Os elementos da página devem ser exibidos corretamente na resolução testada.
+
+- Os textos devem permanecer legíveis.
+
+- Os cards de produtos devem manter alinhamento consistente, sem sobreposição.
+
+- O cabeçalho e o rodapé devem permanecer dentro dos limites da página.
+
+- Não deve existir rolagem horizontal indevida.
+
+---
+
+## CT28 - Responsividade do layout em dispositivo móvel
+
+```gherkin
+Funcionalidade: Responsividade da loja em dispositivo móvel
+
+  @CT28
+  Cenário: Adaptar os elementos da página pelo dispositivo móvel
+
+  Dado que o cliente acessa a Verzel Store
+  Quando visualiza a aplicação pelo navegador do dispositivo móvel
+  Então o cabeçalho deve permanecer legível e organizado
+  E a seção principal deve se adaptar à largura disponível
+  E os cards de produtos devem se reorganizar sem sobreposição
+  E o rodapé deve permanecer legível e dentro dos limites da página
+  E não deve existir rolagem horizontal indevida
+```
+
+### Informações do cenário
+
+**ID:** CT28
+
+**Objetivo:**  
+Validar a adaptação dos elementos da interface, verificando a organização, legibilidade e disposição do conteúdo.
+
+**Prioridade:** Média
+
+**Tipo:** Responsividade / Teste visual
+
+**Técnica:** Teste exploratório
+
+### Dados de teste
+
+| Campo | Valor |
+|---|---|
+| Resolução  | 392 × 712 pixels |
+| Dispositivo | Xiaomi MI 9T |
+| Navegador | Google Chrome para Android |
+| Elementos validados | Cabeçalho, seção principal, cards de produtos e rodapé |
+
+
+### Regras de negócio validadas
+
+- Os elementos da página devem ser exibidos corretamente na resolução testada.
+
+- Os textos devem permanecer legíveis.
+
+- Os cards de produtos devem manter alinhamento consistente, sem sobreposição.
+
+- O cabeçalho e o rodapé devem permanecer dentro dos limites da página.
+
+- Não deve existir rolagem horizontal indevida.
+
