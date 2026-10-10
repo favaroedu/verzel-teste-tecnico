@@ -52,8 +52,8 @@ Os arquivos estão identificados de acordo com os respectivos casos de teste.
 
 Foram automatizados 3 cenários E2E:
 
-- CT02 - Aplicação de cupom válido
 - CT06 - Cupom expirado
+- CT11 - Limite máximo de quantidade por produto
 - CT20 - Finalização do pedido com cupom de desconto
 
 Os testes automatizados estão disponíveis em:
@@ -110,10 +110,11 @@ verzel-teste-tecnico/
 │   │   ├── CT01-carrinho-sem-cupom.png
 │   │   ├── CT02-cupom-valido.png
 │   │   ├── ...
-│   │   └── CT23-cupom-expirado-pedido.png
+│   │   └── CT28-responsividade-mobile.png
 │   │
 │   ├── playwright/
-│   │   └── casos.spec.js
+│   │   ├── casos.spec.js
+│   │   └── comandos.js
 │   │
 │   ├── bugs.md
 │   ├── casos-de-teste.md
@@ -137,17 +138,17 @@ A execução combinou diferentes abordagens de teste:
 
 ## Resultado
 
-Foram executados 23 casos de teste:
+Foram executados 28 casos de teste:
 
-- 22 casos aprovados;
+- 27 casos aprovados;
 - 1 caso reprovado;
-- 1 bug identificado.
+- 3 bugs identificados.
 
 O caso reprovado foi o **CT08 - Frete grátis no limite de R$ 200,00**.
 
 O comportamento identificado foi a cobrança de R$ 19,90 de frete quando o subtotal era exatamente R$ 200,00, contrariando a regra de negócio que determina frete grátis para subtotais maiores ou iguais a R$ 200,00.
 
-O bug está documentado em:
+Os bugs estão documentados em:
 
 `testes/bugs.md`
 

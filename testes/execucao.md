@@ -1,5 +1,8 @@
 # Execução dos Testes
 
+### Sobre os testes: 
+Foram 28 casos executados, 27 aprovados e 1 reprovado. 
+
 ## CT01 - Cálculo do carrinho sem cupom
 
 **Data da execução:** 06/10/2026

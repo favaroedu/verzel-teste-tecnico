@@ -52,9 +52,9 @@ A aplicação informa que faltam R$ 0,00 para o frete grátis, porém o frete co
 
 **Status:** Aberto
 
-**Severidade:** Crítica
+**Severidade:** Baixa
 
-**Prioridade:** Alta
+**Prioridade:** Baixa
 
 ### Descrição
 
@@ -85,3 +85,45 @@ O número 0 aparece deslocado para cima dentro do círculo verde, causando uma i
 ### Evidência
 
 [BUG-002: Desalinhamento vertical do contador do carrinho](evidencias/BUG-002-contador-carrinho-desalinhado.png)
+
+---
+
+## BUG-003 - Reutilização do cupom de primeira compra
+
+**Status:** Aberto
+
+**Severidade:** Crítica
+
+**Prioridade:** Alta
+
+### Descrição
+
+O cupom promocional BEMVINDO10, anunciado na página inicial como válido para a primeira compra, é aceito novamente após a realização de um pedido anterior, utilizando os mesmos dados de cliente.
+
+### Pré-condições
+
+- Ter realizado e confirmado uma compra utilizando o cupom BEMVINDO10.
+- Possuir os dados utilizados no pedido anterior.
+
+### Passos para reprodução
+
+1. Acessar a loja virtual.
+2. Adicionar um produto ao carrinho.
+3. Aplicar o cupom BEMVINDO10.
+4. Preencher os dados do cliente e confirmar o pedido.
+5. Iniciar uma nova compra utilizando os mesmos dados.
+6. Aplicar novamente o cupom BEMVINDO10.
+
+### Resultado esperado
+
+O sistema deve verificar se o cliente já realizou uma compra e, como a promoção é restrita à primeira compra, impedir a reutilização do cupom ou a utilização em uma compra que não seja a primeira e exibir uma mensagem informativa.
+
+### Resultado obtido
+
+O sistema aceita novamente o cupom BEMVINDO10 e concede 10% de desconto, mesmo após a realização de uma compra anterior com os mesmos dados.
+
+### Evidência
+
+[BUG-003: Reutilização de cupom de primeira compra](evidencias/BUG-003-reutilizacao-upom.png)
+
+[BUG-003: Vídeo reutilizando o cupom](https://jam.dev/c/36e98b12-7fbb-4d63-b4fb-704bebc795cc)
