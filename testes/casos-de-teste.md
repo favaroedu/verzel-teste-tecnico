@@ -548,10 +548,12 @@ Funcionalidade: Validação de quantidade de produtos
   @CT12
   Cenário: Rejeitar quantidade superior a 5 unidades do mesmo produto
 
-    Dado que o cliente está na página de produtos
-    Quando o cliente tenta adicionar 6 unidades do produto "Camiseta Essencial" ao carrinho
-    Então a operação deve ser rejeitada
-    E a quantidade máxima permitida deve ser 5
+     Dado que o cliente está na página de produtos
+     E o carrinho contém 4 unidades do produto "Camiseta Essencial"
+     Quando o cliente adiciona mais uma unidade desse produto ao carrinho
+     Então o carrinho deve conter 5 unidades do produto "Camiseta Essencial"
+     E deve ser exibida a mensagem "Limite de 5 unidades atingido"
+     E o botão "Adicionar ao carrinho" desse produto deve ficar desabilitado
 ```
 
 ### Informações do cenário
@@ -970,16 +972,16 @@ Validar a finalização completa de um pedido utilizando dados válidos e um cup
 
 ---
 
-## CT21 - Dados do cliente inválidos pela API
+## CT21 - Nome do cliente inválido pela API
 
 ```gherkin
 Funcionalidade: Criação de pedidos
 
   @CT21
-  Cenário: Rejeitar pedido com dados do cliente inválidos
+  Cenário: Rejeitar pedido com nome do cliente inválido
 
     Dado que a API de pedidos está disponível
-    Quando o cliente envia um pedido com nome, e-mail e CEP inválidos
+    Quando o cliente envia um pedido com nome inválido
     Então a API deve retornar HTTP 422
     E o código do erro deve ser "DADOS_INVALIDOS"
     E a resposta deve informar os campos inválidos
@@ -1004,15 +1006,15 @@ Validar o comportamento da API ao receber dados inválidos do cliente durante a 
 |---|---|
 | Endpoint | POST /api/pedidos |
 | Nome | Maria |
-| E-mail | maria@ |
-| CEP | 123 |
+| E-mail | maria@exemplo.com |
+| CEP | 83255000 |
 | Produto | Mochila Urbana 20L |
 | Código | P005 |
 | Quantidade | 1 |
 
 ### Regras de negócio validadas
 
-- O nome deve conter nome e sobrenome.
+- O nome deve conter apenas primeiro nome.
 - O e-mail deve possuir formato válido.
 - O CEP deve possuir 8 dígitos.
 - Dados inválidos devem retornar HTTP 422.
@@ -1118,4 +1120,151 @@ Validar que a API rejeita a criação de um pedido quando é informado um cupom 
 - A API deve retornar HTTP 422.
 - O erro deve ser identificado como `CUPOM_EXPIRADO`.
 - O pedido não deve ser criado.
+
+---
+
+## CT24 - E-mail do cliente inválido pela API
+
+```gherkin
+Funcionalidade: Criação de pedidos
+
+  @CT24
+  Cenário: Rejeitar pedido com e-mail do cliente inválido
+
+    Dado que a API de pedidos está disponível
+    Quando o cliente envia um pedido com e-mail inválido
+    Então a API deve retornar HTTP 422
+    E o código do erro deve ser "DADOS_INVALIDOS"
+    E a resposta deve informar os campos inválidos
+```
+
+### Informações do cenário
+
+**ID:** CT24
+
+**Objetivo:**  
+Validar o comportamento da API ao receber dado de e-mail inválido do cliente durante a criação de um pedido.
+
+**Prioridade:** Média
+
+**Tipo:** Negativo / API
+
+**Técnica:** Teste de validação de entrada
+
+### Dados de teste
+
+| Campo | Valor |
+|---|---|
+| Endpoint | POST /api/pedidos |
+| Nome | Maria Silva |
+| E-mail | maria@ |
+| CEP | 83255000 |
+| Produto | Mochila Urbana 20L |
+| Código | P005 |
+| Quantidade | 1 |
+
+### Regras de negócio validadas
+
+- O nome deve conter nome e sobrenome.
+- O e-mail deve possuir formato inválido.
+- O CEP deve possuir 8 dígitos.
+- Dados inválidos devem retornar HTTP 422.
+- O erro deve ser identificado como `DADOS_INVALIDOS`.
+
+---
+
+## CT25 - CEP do cliente inválido pela API
+
+```gherkin
+Funcionalidade: Criação de pedidos
+
+  @CT25
+  Cenário: Rejeitar pedido com o CEP do cliente inválido
+
+    Dado que a API de pedidos está disponível
+    Quando o cliente envia um pedido com CEP inválido
+    Então a API deve retornar HTTP 422
+    E o código do erro deve ser "DADOS_INVALIDOS"
+    E a resposta deve informar os campos inválidos
+```
+
+### Informações do cenário
+
+**ID:** CT25
+
+**Objetivo:**  
+Validar o comportamento da API ao receber dado de CEP inválido do cliente durante a criação de um pedido.
+
+**Prioridade:** Média
+
+**Tipo:** Negativo / API
+
+**Técnica:** Teste de validação de entrada
+
+### Dados de teste
+
+| Campo | Valor |
+|---|---|
+| Endpoint | POST /api/pedidos |
+| Nome | Maria Silva |
+| E-mail | maria@exemplo.com |
+| CEP | 83255 |
+| Produto | Mochila Urbana 20L |
+| Código | P005 |
+| Quantidade | 1 |
+
+### Regras de negócio validadas
+
+- O nome deve conter nome e sobrenome.
+- O e-mail deve possuir formato válido.
+- O CEP deve possuir 5 dígitos.
+- Dados inválidos devem retornar HTTP 422.
+- O erro deve ser identificado como `DADOS_INVALIDOS`.
+
+---
+
+## CT26 - Listagem de produtos disponíveis pela API
+
+```gherkin
+Funcionalidade: Consulta de produtos pela API
+
+  @CT26
+  Cenário: Listar produtos disponíveis com sucesso
+
+    Dado que a API da Verzel Store está disponível 
+    Quando o cliente realiza uma requisição GET para o endpoint "/api/produtos" 
+    Então a resposta deve retornar o status HTTP 200 
+    E a resposta deve conter a lista de produtos disponíveis 
+    E cada produto deve apresentar seu identificador, nome e preço
+```
+
+### Informações do cenário
+
+**ID:** CT26
+
+**Objetivo:**  
+Validar a listagem de produtos disponíveis por meio da API, verificando o retorno HTTP 200 e a estrutura dos dados.
+
+**Prioridade:** Alta
+
+**Tipo:** Positivo / API
+
+**Técnica:** Teste positivo e validação de resposta
+
+### Dados de teste
+
+| Campo | Valor |
+|---|---|
+| Endpoint | POST /api/produtos |
+| Parâmetros | Nenhum |
+| Body | Não aplicável |
+| Status HTTP esperado | 200 OK |
+
+
+### Regras de negócio validadas
+
+- A API deve permitir a consulta dos produtos disponíveis sem exigir parâmetros.
+- Uma requisição válida deve retornar HTTP 200.
+- A resposta deve conter a lista de produtos disponíveis.
+- Cada produto deve apresentar identificador, nome e preço.
 

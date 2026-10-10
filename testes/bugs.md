@@ -44,4 +44,4 @@ A aplicação informa que faltam R$ 0,00 para o frete grátis, porém o frete co
 
 ### Evidência
 
-`evidencias/CT08-frete-gratis-limite-200.png`
+[Evidência: CT08 - Frete grátis no limite de R$ 200,00](evidencias/CT08-frete-gratis-limite-200.png)

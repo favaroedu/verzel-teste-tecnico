@@ -4,7 +4,7 @@
 
 **Data da execução:** 06/10/2026
 
-**Status:** PASS
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -28,7 +28,7 @@ Todos os valores apresentados pela aplicação correspondem aos resultados esper
 
 ### Evidência
 
-`evidencias/CT01-carrinho-sem-cupom.png`
+[Evidência: CT01 - Carrinho sem cupom](evidencias/CT01-carrinho-sem-cupom.png)
 
 ---
 
@@ -36,7 +36,7 @@ Todos os valores apresentados pela aplicação correspondem aos resultados esper
 
 **Data da execução:** 07/10/2026
 
-**Status:** PASS
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -61,7 +61,7 @@ Os valores apresentados pela aplicação correspondem aos resultados esperados d
 
 ### Evidência
 
-`evidencias/CT02-cupom-valido.png`
+[Evidência: CT02 - Cupom válido](evidencias/CT02-cupom-valido.png)
 
 ---
 
@@ -69,7 +69,7 @@ Os valores apresentados pela aplicação correspondem aos resultados esperados d
 
 **Data da execução:** 07/10/2026
 
-**Status:** PASS
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -94,7 +94,7 @@ O comportamento está de acordo com a regra de negócio que determina que o cód
 
 ### Evidência
 
-`evidencias/CT03-cupom-minusculo-input.png`
+[Evidência: CT03 - Cupom em letras minúsculas](evidencias/CT03-cupom-minusculo-input.png)
 
 ---
 
@@ -102,7 +102,7 @@ O comportamento está de acordo com a regra de negócio que determina que o cód
 
 **Data da execução:** 07/10/2026
 
-**Status:** PASS
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -127,7 +127,7 @@ O comportamento está de acordo com a regra de negócio que determina que o cupo
 
 ### Evidência
 
-`evidencias/CT04-cupom-com-espacos.png`
+[Evidência: CT04 - Cupom com espaços nas extremidades](evidencias/CT04-cupom-com-espacos.png)
 
 ---
 
@@ -135,7 +135,7 @@ O comportamento está de acordo com a regra de negócio que determina que o cupo
 
 **Data da execução:** 07/10/2026
 
-**Status:** PASS
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -160,7 +160,7 @@ O desconto permaneceu em R$ 0,00 e os demais valores do pedido permaneceram inal
 
 ### Evidência
 
-`evidencias/CT05-cupom-inexistente.png`
+[Evidência: CT05 - Cupom inexistente](evidencias/CT05-cupom-inexistente.png)
 
 ---
 
@@ -168,7 +168,7 @@ O desconto permaneceu em R$ 0,00 e os demais valores do pedido permaneceram inal
 
 **Data da execução:** 07/10/2026
 
-**Status:** PASS
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -193,15 +193,15 @@ O desconto permaneceu em R$ 0,00 e os demais valores do pedido permaneceram inal
 
 ### Evidência
 
-`evidencias/CT06-cupom-expirado.png`
+[Evidência: CT06 - Cupom expirado](evidencias/CT06-cupom-expirado.png)
 
 ---
 
-## CT07 - Troca de cupom
+## CT07 - Troca de cupom válido para expirado
 
 **Data da execução:** 07/10/2026
 
-**Status:** PASS
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -225,15 +225,11 @@ O desconto permaneceu em R$ 0,00 e os demais valores do pedido permaneceram inal
 
 ### Resultado da execução
 
-O cupom `BEMVINDO10` foi aplicado inicialmente e, após sua remoção, foi possível informar outro cupom.
-
-O cupom `VERAO2026` foi corretamente identificado como expirado, sem manter o desconto do cupom anterior.
-
-O comportamento está de acordo com a regra de negócio que determina que apenas um cupom pode ser aplicado por vez e que o cupom atual deve ser removido antes da aplicação de outro.
+Após a remoção do cupom válido, o desconto de R$ 13,99 deixou de ser aplicado. O segundo cupom foi identificado como expirado, e o carrinho permaneceu sem desconto, demonstrando que o benefício do cupom anterior não foi mantido indevidamente.
 
 ### Evidência
 
-`evidencias/CT07-troca-de-cupom.png`
+[Evidência: CT07 - Troca de cupom](evidencias/CT07-troca-de-cupom.png)
 
 ---
 
@@ -241,7 +237,7 @@ O comportamento está de acordo com a regra de negócio que determina que apenas
 
 **Data da execução:** 07/10/2026
 
-**Status:** FAIL
+**Status:** FAIL ❌
 
 ### Dados utilizados
 
@@ -268,7 +264,7 @@ O comportamento diverge da regra de negócio definida para o ambiente, segundo a
 
 ### Evidência
 
-`evidencias/CT08-frete-gratis-limite-200.png`
+[Evidência: CT08 - Frete grátis no limite de R$ 200,00](evidencias/CT08-frete-gratis-limite-200.png)
 
 ### Bug relacionado
 
@@ -280,7 +276,7 @@ O comportamento diverge da regra de negócio definida para o ambiente, segundo a
 
 **Data da execução:** 07/10/2026
 
-**Status:** PASS
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -306,7 +302,7 @@ O valor apresentado como faltante para atingir o frete grátis também foi calcu
 
 ### Evidência
 
-`evidencias/CT09-frete-abaixo-200.png`
+[Evidência: CT09 - Frete abaixo de R$ 200,00](evidencias/CT09-frete-abaixo-200.png)
 
 ---
 
@@ -314,7 +310,7 @@ O valor apresentado como faltante para atingir o frete grátis também foi calcu
 
 **Data da execução:** 07/10/2026
 
-**Status:** PASS
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -342,7 +338,7 @@ O comportamento está de acordo com a regra de negócio definida para o cálculo
 
 ### Evidência
 
-`evidencias/CT10-frete-antes-do-desconto.png`
+[Evidência: CT10 - Frete grátis antes do desconto](evidencias/CT10-frete-antes-do-desconto.png)
 
 ---
 
@@ -350,7 +346,7 @@ O comportamento está de acordo com a regra de negócio definida para o cálculo
 
 **Data da execução:** 08/10/2026
 
-**Status:** PASS
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -376,7 +372,7 @@ A quantidade máxima foi respeitada e o cálculo do subtotal e do total foi real
 
 ### Evidência
 
-`evidencias/CT11-quantidade-maxima.png`
+[Evidência: CT11 - Quantidade máxima permitida](evidencias/CT11-quantidade-maxima.png)
 
 ---
 
@@ -384,7 +380,7 @@ A quantidade máxima foi respeitada e o cálculo do subtotal e do total foi real
 
 **Data da execução:** 08/10/2026
 
-**Status:** PASS
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -409,14 +405,15 @@ A tentativa de aumentar a quantidade para 6 unidades não foi permitida, mantend
 
 ### Evidência
 
-`evidencias/CT12-quantidade-acima-limite.png`
+[Evidência: CT12 - Quantidade acima do limite](evidencias/CT12-quantidade-acima-limite.png)
 
 ---
 
 ## CT13 - Produto duplicado no cálculo do carrinho
 
 **Data de execução:** 08/10/2026  
-**Resultado:** PASS
+
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -425,8 +422,8 @@ A tentativa de aumentar a quantidade para 6 unidades não foi permitida, mantend
 - Produto repetido: P002 - Calça Jeans Slim
 - Quantidade do item repetido: 1
 - Cupom: Não informado
-- Método: API
-- Endpoint: `POST /api/carrinho/calcular`
+- Método: POST
+- Endpoint: `/api/carrinho/calcular`
 
 ### Resultado esperado
 
@@ -444,26 +441,25 @@ A API retornou:
 - Mensagem: `"O produto P002 aparece mais de uma vez."`
 - Campo: `itens[1].produtoId`
 
-**Resultado:** PASS
-
 ### Evidência
 
-`evidencias/CT13-produto-duplicado.png`
+[Evidência: CT13 - Produto duplicado](evidencias/CT13-produto-duplicado.png)
 
 ---
 
 ## CT14 - Quantidade inválida
 
 **Data de execução:** 08/10/2026  
-**Resultado:** PASS
+
+**Status:** PASS ✅
 
 ### Dados utilizados
 
 - Produto: P002 - Calça Jeans Slim
 - Quantidade: 0
 - Cupom: Não informado
-- Método: API
-- Endpoint: `POST /api/carrinho/calcular`
+- Método: POST
+- Endpoint: `/api/carrinho/calcular`
 
 ### Resultado esperado
 
@@ -481,26 +477,25 @@ A API retornou:
 - Mensagem: `"A quantidade deve ser um número inteiro maior ou igual a 1."`
 - Campo: `itens[0].quantidade`
 
-**Resultado:** PASS
-
 ### Evidência
 
-`evidencias/CT14-quantidade-invalida.png`
+[Evidência: CT14 - Quantidade inválida](evidencias/CT14-quantidade-invalida.png)
 
 ---
 
 ## CT15 - Produto inexistente
 
-**Data de execução:** 08/10/2026  
-**Resultado:** PASS
+**Data de execução:** 08/10/2026
+
+**Status:** PASS ✅
 
 ### Dados utilizados
 
 - Produto: P999 - Produto inexistente
 - Quantidade: 1
 - Cupom: Não informado
-- Método: API
-- Endpoint: `POST /api/carrinho/calcular`
+- Método: POST
+- Endpoint: `/api/carrinho/calcular`
 
 ### Resultado esperado
 
@@ -518,18 +513,17 @@ A API retornou:
 - Mensagem: `"Produto P999 não encontrado."`
 - Campo: `itens[0].produtoId`
 
-**Resultado:** PASS
-
 ### Evidência
 
-`evidencias/CT15-produto-inexistente.png`
+[Evidência: CT15 - Produto inexistente](evidencias/CT15-produto-inexistente.png)
 
 ---
 
 ## CT16 - Nome sem sobrenome
 
 **Data de execução:** 08/10/2026  
-**Resultado:** PASS
+
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -545,25 +539,26 @@ A API retornou:
 A aplicação deve rejeitar a finalização do pedido quando o nome informado não possuir sobrenome.
 
 - Mensagem esperada: `Informe nome e sobrenome.`
+- O pedido não deve ser confirmado nem finalizado enquanto o campo de nome estiver inválido.
 
 ### Resultado obtido
 
 A aplicação apresentou:
 
 - Mensagem: `Informe nome e sobrenome.`
-
-**Resultado:** PASS
+- A finalização do pedido permaneceu bloqueada enquanto o nome não foi preenchido corretamente.
 
 ### Evidência
 
-`evidencias/CT16-nome-sem-sobrenome.png`
+[Evidência: CT16 - Nome sem sobrenome](evidencias/CT16-nome-sem-sobrenome.png)
 
 ---
 
 ## CT17 - E-mail inválido
 
 **Data de execução:** 08/10/2026  
-**Resultado:** PASS
+
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -588,18 +583,17 @@ A aplicação apresentou:
 
 O pedido não foi finalizado.
 
-**Resultado:** PASS
-
 ### Evidência
 
-`evidencias/CT17-email-invalido.png`
+[Evidência: CT17 - E-mail inválido](evidencias/CT17-email-invalido.png)
 
 ---
 
 ## CT18 - CEP válido sem hífen
 
 **Data de execução:** 08/10/2026  
-**Resultado:** PASS
+
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -624,18 +618,17 @@ A aplicação aceitou o CEP informado sem hífen e finalizou o pedido com sucess
 - Frete: `R$ 19,90`
 - Total: `R$ 159,80`
 
-**Resultado:** PASS
-
 ### Evidência
 
-`evidencias/CT18-cep-sem-hifen.png`
+[Evidência: CT18 - CEP sem hífen](evidencias/CT18-cep-sem-hifen.png)
 
 ---
 
 ## CT19 - CEP válido com hífen
 
 **Data de execução:** 08/10/2026  
-**Resultado:** PASS
+
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -654,24 +647,22 @@ O pedido deve ser finalizado com sucesso quando for informado um CEP válido no 
 
 A aplicação aceitou o CEP informado com hífen e finalizou o pedido com sucesso.
 
-- Número do pedido: conforme apresentado na tela
 - Subtotal: `R$ 139,90`
 - Desconto: `R$ 0,00`
 - Frete: `R$ 19,90`
 - Total: `R$ 159,80`
 
-**Resultado:** PASS
-
 ### Evidência
 
-`evidencias/CT19-cep-com-hifen.png`
+[Evidência: CT19 - CEP com hífen](evidencias/CT19-cep-com-hifen.png)
 
 ---
 
 ## CT20 - Finalização do pedido com cupom de desconto
 
 **Data de execução:** 08/10/2026  
-**Resultado:** PASS
+
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -703,32 +694,31 @@ O pedido foi criado com sucesso.
 - Frete: `R$ 19,90`
 - Total: `R$ 109,90`
 
-**Resultado:** PASS
-
 ### Evidência
 
-`evidencias/CT20-finalizacao-pedido-cupom.png`
+[Evidência: CT20 - Finalização do pedido com cupom](evidencias/CT20-finalizacao-pedido-cupom.png)
 
 ---
 
-## CT21 - Dados do cliente inválidos pela API
+## CT21 - Nome do cliente inválido pela API
 
-**Data de execução:** 08/10/2026  
-**Resultado:** PASS
+**Data de execução:** 08/10/2026 
+
+**Status:** PASS ✅
 
 ### Dados utilizados
 
 - Produto: P005 - Mochila Urbana 20L
 - Quantidade: 1
 - Nome: Maria
-- E-mail: maria@
-- CEP: 123
-- Método: API
-- Endpoint: `POST /api/pedidos`
+- E-mail: maria@exemplo.com
+- CEP: 83255000
+- Método: POST
+- Endpoint: `/api/pedidos`
 
 ### Resultado esperado
 
-A API deve rejeitar a requisição quando os dados do cliente forem inválidos.
+A API deve rejeitar a requisição quando o nome do cliente for inválido.
 
 - HTTP esperado: `422 Unprocessable Entity`
 - Código esperado: `DADOS_INVALIDOS`
@@ -741,21 +731,18 @@ A API retornou:
 - Código: `DADOS_INVALIDOS`
 - Mensagem: `Existem campos inválidos no pedido.`
 - Campo: `cliente.nome` — `Informe nome e sobrenome.`
-- Campo: `cliente.email` — `Informe um e-mail válido.`
-- Campo: `cliente.cep` — `Informe um CEP com 8 dígitos.`
-
-**Resultado:** PASS
 
 ### Evidência
 
-`evidencias/CT21-dados-cliente-invalidos.png`
+[Evidência: CT21 - Dados do cliente inválidos](evidencias/CT21-dados-cliente-invalidos.png)
 
 ---
 
 ## CT22 - Cupom inexistente na criação do pedido
 
 **Data de execução:** 08/10/2026  
-**Resultado:** PASS
+
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -765,8 +752,8 @@ A API retornou:
 - E-mail: maria@exemplo.com
 - CEP: 01310-100
 - Cupom: CUPOMINVALIDO
-- Método: API
-- Endpoint: `POST /api/pedidos`
+- Método: POST
+- Endpoint: `/api/pedidos`
 
 ### Resultado esperado
 
@@ -786,18 +773,17 @@ A API retornou:
 
 O pedido não foi criado.
 
-**Resultado:** PASS
-
 ### Evidência
 
-`evidencias/CT22-cupom-inexistente-pedido.png`
+[Evidência: CT22 - Cupom inexistente no pedido](evidencias/CT22-cupom-inexistente-pedido.png)
 
 ---
 
 ## CT23 - Cupom expirado na criação do pedido
 
 **Data de execução:** 08/10/2026  
-**Resultado:** PASS
+
+**Status:** PASS ✅
 
 ### Dados utilizados
 
@@ -807,8 +793,8 @@ O pedido não foi criado.
 - E-mail: maria@exemplo.com
 - CEP: 01310-100
 - Cupom: VERAO2026
-- Método: API
-- Endpoint: `POST /api/pedidos`
+- Método: POST
+- Endpoint: `/api/pedidos`
 
 ### Resultado esperado
 
@@ -828,8 +814,117 @@ A API retornou:
 
 O pedido não foi criado.
 
-**Resultado:** PASS
+### Evidência
+
+[Evidência: CT23 - Cupom expirado no pedido](evidencias/CT23-cupom-expirado-pedido.png)
+
+---
+
+## CT24 - E-mail do cliente inválido pela API
+
+**Data de execução:** 08/10/2026  
+
+**Status:** PASS ✅
+
+### Dados utilizados
+
+- Produto: P005 - Mochila Urbana 20L
+- Quantidade: 1
+- Nome: Maria Silva
+- E-mail: maria@
+- CEP: 83255000
+- Método: POST
+- Endpoint: `/api/pedidos`
+
+### Resultado esperado
+
+A API deve rejeitar a requisição quando o e-mail do cliente for inválido.
+
+- HTTP esperado: `422 Unprocessable Entity`
+- Código esperado: `DADOS_INVALIDOS`
+
+### Resultado obtido
+
+A API retornou:
+
+- HTTP: `422 Unprocessable Entity`
+- Código: `DADOS_INVALIDOS`
+- Mensagem: `Existem campos inválidos no pedido.`
+- Campo: `cliente.email` — `Informe um e-mail válido.`
 
 ### Evidência
 
-`evidencias/CT23-cupom-expirado-pedido.png`
+[Evidência: CT24 - E-mail do cliente inválido](evidencias/CT24-email-cliente-invalido.png)
+
+---
+
+## CT25 - CEP do cliente inválido pela API
+
+**Data de execução:** 08/10/2026  
+
+**Status:** PASS ✅
+
+### Dados utilizados
+
+- Produto: P005 - Mochila Urbana 20L
+- Quantidade: 1
+- Nome: Maria Silva
+- E-mail: maria@exemplo.com
+- CEP: 83255
+- Método: POST
+- Endpoint: `/api/pedidos`
+
+### Resultado esperado
+
+A API deve rejeitar a requisição quando o CEP do cliente for inválido.
+
+- HTTP esperado: `422 Unprocessable Entity`
+- Código esperado: `DADOS_INVALIDOS`
+
+### Resultado obtido
+
+A API retornou:
+
+- HTTP: `422 Unprocessable Entity`
+- Código: `DADOS_INVALIDOS`
+- Mensagem: `Existem campos inválidos no pedido.`
+- Campo: `cliente.cep` — `Informe um CEP com 8 dígitos.`
+
+### Evidência
+
+[Evidência: CT25 - CEP do cliente inválido](evidencias/CT25-cep-cliente-invalido.png)
+
+---
+
+## CT26 - Listagem de produtos disponíveis pela API
+
+**Data de execução:** 09/10/2026 
+
+**Status:** PASS ✅
+
+### Dados utilizados
+
+- Método: GET
+- Endpoint: `/api/produtos`
+- Parâmetros: Nenhum
+- Body: Não aplicável
+
+### Resultado esperado
+
+A API deve retornar a lista de produtos disponíveis com sucesso.
+
+- HTTP esperado: 200 OK
+- A resposta deve conter a lista de produtos.
+- Cada produto deve apresentar identificador, nome e preço.
+
+### Resultado obtido
+
+A API retornou:
+
+- HTTP: 200 OK
+- A listagem de produtos foi retornada com sucesso.
+- Os produtos apresentaram identificador, nome e preço.
+
+### Evidência
+
+[Evidência: CT26 - Listagem de produtos pela API](evidencias/CT26-listagem-produtos-api.png)

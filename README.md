@@ -129,15 +129,11 @@ verzel-teste-tecnico/
 
 A execução combinou diferentes abordagens de teste:
 
-- Testes funcionais;
-- Testes positivos e negativos;
-- Análise de valor limite;
-- Testes exploratórios;
-- Validação de regras de negócio;
-- Validação de respostas da API;
-- Automação E2E com Playwright.
+- **Escopo das validações**: funcionalidades, regras de negócio, usabilidade e responsividade e respostas da API.
+- **Técnicas e abordagens**: cenários positivos e negativos, análise de valor limite e testes exploratórios.
+- **Automação**: testes E2E com Playwright.
+- **Priorização**: regras de negócio, cálculos financeiros e validações de entrada.
 
-Os cenários foram priorizados considerando principalmente regras de negócio, cálculos financeiros e validações de entrada.
 
 ## Resultado
 
@@ -162,9 +158,8 @@ Foi utilizada Inteligência Artificial como ferramenta de apoio durante a elabor
 A IA foi utilizada para:
 
 - Apoio na organização e revisão da documentação;
-- Estruturação dos cenários em Gherkin;
 - Revisão dos casos de teste;
 - Apoio na revisão dos scripts de automação com Playwright;
 - Apoio na identificação de inconsistências entre os artefatos.
 
-A execução dos testes, análise dos comportamentos da aplicação, coleta das evidências e identificação dos bugs foram realizadas com base no ambiente disponibilizado para o teste.
+A execução dos testes, a análise dos comportamentos da aplicação, a coleta de evidências e a identificação dos bugs foram realizadas por mim no ambiente disponibilizado para o desafio. Todo o conteúdo produzido com apoio da IA foi revisado e validado por mim.
